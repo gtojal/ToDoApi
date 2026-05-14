@@ -8,7 +8,7 @@ O projeto foi desenvolvido como desafio técnico, aplicando boas práticas de ar
 ## 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/SEU-USUARIO/ToDoApi.git
+git clone https://github.com/gtojal/ToDoApi.git
 ```
 
 ---
@@ -96,7 +96,6 @@ https://localhost:xxxx/swagger
 | 1 | Pendente |
 | 2 | Em andamento |
 | 3 | Concluído |
-
 
 
 # Autor
