@@ -25,24 +25,6 @@ namespace ToDoApi.Controllers
         }
 
         /// <summary>
-        /// Lista todas as tarefas
-        /// </summary>
-        /// <returns>Lista de tarefas cadastradas</returns>
-        [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<IEnumerable<TaskResponseDto>>> GetAll(
-            [FromQuery] TaskStatusEnum? status,
-            [FromQuery] DateTime? dataVencimento)
-        {
-            var tasks = await _taskRepository.GetAllAsync(status, dataVencimento);
-
-            var response = _mapper.Map<IEnumerable<TaskResponseDto>>(tasks);
-
-            return Ok(response);
-        }
-
-
-        /// <summary>
         /// Busca tarefa por ID
         /// </summary>
         /// <param name="id">Id da tarefa</param>
@@ -61,6 +43,22 @@ namespace ToDoApi.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Lista todas as tarefas
+        /// </summary>
+        /// <returns>Lista de tarefas cadastradas</returns>
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<IEnumerable<TaskResponseDto>>> GetAll(
+            [FromQuery] TaskStatusEnum? status,
+            [FromQuery] DateTime? dataVencimento)
+        {
+            var tasks = await _taskRepository.GetAllAsync(status, dataVencimento);
+
+            var response = _mapper.Map<IEnumerable<TaskResponseDto>>(tasks);
+
+            return Ok(response);
+        }
 
         /// <summary>
         /// Cria uma nova tarefa
