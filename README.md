@@ -61,7 +61,7 @@ dotnet run
 Após executar o projeto:
 
 ```txt
-https://localhost:xxxx/swagger
+https://localhost:7065/swagger/index.html
 ```
 
 ---
